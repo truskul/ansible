@@ -1,0 +1,5 @@
+---
+- name: Install
+  hosts: all
+  roles:
+  - { role: install }

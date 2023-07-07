@@ -1,0 +1,9 @@
+---
+- name: Update repository
+  include_tasks: update-repository.yml
+
+- name: "Install {{ item }}"
+  include_tasks: install.yml
+  loop: "{{ packages }}"
+  loop_control:
+    loop_var: package

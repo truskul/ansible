@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  host-1:
+    container_name: host-1
+    image: rastasheep/ubuntu-sshd
+    ports:
+      - 8022:22
+  host-2:
+    container_name: host-2
+    image: rastasheep/ubuntu-sshd
+    ports:
+      - 8032:22

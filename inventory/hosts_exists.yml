@@ -1,0 +1,12 @@
+my_group:
+  hosts:
+    host1:
+      ansible_host: 127.0.0.1
+      ansible_port: 8022
+    host2:
+      ansible_host: 127.0.0.1
+      ansible_port: 8032
+  vars:
+    packages:
+      - git
+      - curl

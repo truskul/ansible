@@ -1,0 +1,11 @@
+- name: "Check if {{ package }} is installed"
+  shell: "command -v {{ package }}"
+  register: package_exists
+  ignore_errors: true
+
+- name: "Install {{ package }}"
+  when: package_exists is failed
+  package:
+    name: "{{ package }}"
+    state: present
+    
